@@ -1,7 +1,7 @@
 # Set up.
 library(rstudioapi)
-library(tidyverse)
 library(jsonlite)
+library(tidyverse)
 getSourceEditorContext()$path %>%
   dirname() %>%
   setwd()
