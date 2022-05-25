@@ -1,3 +1,8 @@
+# R version 4.2.0 (2022-04-22)
+# Attached packages (not base R):
+# forcats_0.5.1   stringr_1.4.0   dplyr_1.0.9     purrr_0.3.4     readr_2.1.2         
+# tidyr_1.2.0    tibble_3.1.7    ggplot2_3.3.6   tidyverse_1.3.1 jsonlite_1.8.0  
+# rstudioapi_0.13
 # Set up.
 library(rstudioapi)
 library(jsonlite)
@@ -25,8 +30,7 @@ charity <- fromJSON("charity.json") %>%
   # Prioritize income and expenditure data from b.json to avoid donations <
   # total income. Then prioritize total_gross_income in 2020 over latest
   # available income. 2021 data are not fully in yet.
-  mutate(
-    income = case_when(!is.na(income_total_income_and_endowments) ~
+  mutate(income = case_when(!is.na(income_total_income_and_endowments) ~
         income_total_income_and_endowments,
       !is.na(total_gross_income) ~ total_gross_income,
       T ~ latest_income
