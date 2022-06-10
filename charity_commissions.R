@@ -1,3 +1,5 @@
+# Find top 1000 charities by donations and legacies.
+
 # R version 4.2.0 (2022-04-22)
 # Attached packages (not base R):
 # forcats_0.5.1   stringr_1.4.0   dplyr_1.0.9     purrr_0.3.4     readr_2.1.2         
